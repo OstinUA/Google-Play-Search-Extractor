@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Google Play Search Extractor",
+  "version": "2.0",
+  "description": "Extracts app/game links from Google Play search pages",
+  "permissions": ["activeTab", "scripting"],
+  "host_permissions": ["https://play.google.com/*"],
+  "icons": {
+    "128": "icons/icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://play.google.com/store/search*"],
+      "js": ["content.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "128": "icons/icon128.png"
+    }
+  }
+}
